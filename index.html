@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="bg-stone-100" id="home">
     <header>
@@ -112,12 +112,13 @@
           class="relative w-32 h-32 overflow-hidden rounded-full ring ring-cyan-500 ring-3 p-1 hover:ring-emerald-500 shadow-lg transition duration-300"
         >
           <img
-            src="img/profileCut.jpg"
-            alt="picture"
-            loading="lazy"
-            class="rounded-full blur-sm"
-            onload="this.classList.remove('blur-sm')"
+            data-src="img/profileCut.jpg"
+            alt="Muhammad Haykal Makhmud - Backend Developer"
+            class="lazy-image rounded-full w-full h-full object-cover blur-sm transition-all duration-500"
           />
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-cyan-100 to-emerald-100 animate-pulse rounded-full image-placeholder"
+          ></div>
         </div>
 
         <div>
@@ -156,7 +157,12 @@
             d="M0,96L48,80C96,64,192,32,288,42.7C384,53,480,107,576,133.3C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
           ></path>
         </svg>
-        <div id="about" class="max-w-screen-xl mx-auto px-4 lg:px-0">
+        <div
+          id="about"
+          class="max-w-screen-xl mx-auto px-4 lg:px-0"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <h2
             id="about"
             class="text-3xl md:text-4xl font-extrabold mb-6 text-white text-center"
@@ -169,9 +175,9 @@
             <div class="grid md:grid-cols-3 gap-4">
               <div class="md:col-span-1 flex flex-col items-center text-center">
                 <img
-                  src="img/profileCut.jpg"
-                  alt="Haykal"
-                  class="w-40 h-40 object-cover rounded-lg ring-2 ring-cyan-500 p-1 shadow-lg hover:ring-emerald-500 hover:scale-105 transition-transform duration-500"
+                  data-src="img/profileCut.jpg"
+                  alt="Muhammad Haykal Makhmud - Profile Photo"
+                  class="lazy-image w-40 h-40 object-cover rounded-lg ring-2 ring-cyan-500 p-1 shadow-lg hover:ring-emerald-500 hover:scale-105 transition-all duration-500 blur-sm"
                 />
                 <p class="mt-3 text-slate-800 font-semibold">
                   Backend & Web Developer
@@ -249,6 +255,8 @@
       <section class="bg-emerald-500 w-full pt-12">
         <h2
           id="experience"
+          data-aos="zoom-in"
+          data-aos-duration="1500"
           class="text-3xl md:text-4xl font-extrabold mb-6 text-white text-center"
         >
           Experience
@@ -258,16 +266,19 @@
             <div class="grid md:grid-cols-2 gap-4 mb-8">
               <!-- Provinsi -->
               <div
+                data-aos="fade-right"
+                data-aos-duration="1500"
                 class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-5 md:hover:scale-105 transition-transform duration-300"
               >
                 <img
-                  src="img/honor/lksProvinsi.png"
-                  alt="lksProvinsiKaltim"
-                  class="w-full object-contain sm:min-h-84 rounded-lg"
+                  data-src="img/honor/lksProvinsi.png"
+                  alt="LKS East Kalimantan Province Runner Up Certificate - Web Technologies"
+                  class="lazy-image w-full object-contain sm:min-h-84 rounded-lg blur-sm transition-all duration-500"
                 />
                 <div class="mt-3">
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                    <span class="font-bold">Runner Up</span> - LKS Province of East Kalimantan
+                    <span class="font-bold">Runner Up</span> - LKS Province of
+                    East Kalimantan
                   </h3>
                   <p class="text-gray-600 text-sm mb-4 text-justify">
                     Achieved 2nd Place in the Student Skills Competition (LKS)
@@ -281,12 +292,14 @@
 
               <!-- Kota -->
               <div
+                data-aos="fade-left"
+                data-aos-duration="1500"
                 class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-5 md:hover:scale-105 transition-transform duration-300"
               >
                 <img
-                  src="img/honor/lksKota.png"
-                  alt="lksKotaBontang"
-                  class="w-full object-contain sm:min-h-84 rounded-lg"
+                  data-src="img/honor/lksKota.png"
+                  alt="LKS Bontang City Winner Certificate - Web Technologies"
+                  class="lazy-image w-full object-contain sm:min-h-84 rounded-lg blur-sm transition-all duration-500"
                 />
                 <div class="mt-3">
                   <h3 class="text-xl font-semibold text-gray-800 mb-2">
@@ -304,6 +317,8 @@
             </div>
 
             <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
               class="w-full p-4 md:p-8 bg-white rounded-lg shadow-md mx-auto"
             >
               <ol class="relative border-s-2 border-emerald-200 ms-2">
@@ -353,14 +368,14 @@
                     </div>
                     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <img
-                        src="img/project/kpi/kpiLogin.png"
-                        alt="loginPageKPI"
-                        class="w-full rounded-lg hover:scale-105 transition-transform duration-300"
+                        data-src="img/project/kpi/kpiLogin.png"
+                        alt="KPI Dashboard Login Page - PT Kaltim Parna Industri"
+                        class="lazy-image w-full rounded-lg hover:scale-105 transition-all duration-300 blur-sm"
                       />
                       <img
-                        src="img/project/kpi/kpiDashboard.png"
-                        alt="loginPageKPI"
-                        class="w-full rounded-lg hover:scale-105 transition-transform duration-300"
+                        data-src="img/project/kpi/kpiDashboard.png"
+                        alt="KPI Data Visualization Dashboard - Purchase Requisition Analytics"
+                        class="lazy-image w-full rounded-lg hover:scale-105 transition-all duration-300 blur-sm"
                       />
                     </div>
                   </div>
@@ -412,14 +427,14 @@
                     </div>
                     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <img
-                        src="img/project/disdukcapil/loginCapil.png"
-                        alt="loginPageDisdukcapil"
-                        class="w-full rounded-lg hover:scale-105 transition-transform duration-300"
+                        data-src="img/project/disdukcapil/loginCapil.png"
+                        alt="SKIP Login Page - Civil Registry Employee Management System"
+                        class="lazy-image w-full rounded-lg hover:scale-105 transition-all duration-300 blur-sm"
                       />
                       <img
-                        src="img/project/disdukcapil/dashboardCapil.png"
-                        alt="loginPageDisdukcapil"
-                        class="w-full rounded-lg hover:scale-105 transition-transform duration-300"
+                        data-src="img/project/disdukcapil/dashboardCapil.png"
+                        alt="SKIP Dashboard - Employee Data Management Interface"
+                        class="lazy-image w-full rounded-lg hover:scale-105 transition-all duration-300 blur-sm"
                       />
                     </div>
                   </div>
@@ -441,11 +456,14 @@
         </svg>
         <h2
           id="project"
+          data-aos="zoom-in"
+          data-aos-duration="1500"
           class="text-3xl md:text-4xl font-extrabold mb-6 text-gray-600 text-center mt-10"
         >
           My <span class="text-cyan-600">Projects</span>
         </h2>
-        <p class="text-center text-gray-600 text-sm md:text-base mb-10">
+        <p class="text-center text-gray-600 text-sm md:text-base mb-10" data-aos="zoom-in"
+              data-aos-duration="1000">
           Here are some of projects I've built
           <br />
           They include course projects, practice tutorials, and also internship
@@ -538,7 +556,13 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
     <script>
       const projects = [
         {
@@ -710,18 +734,59 @@
         },
       ];
 
+      // Lazy loading observer
+      const imageObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const src = img.getAttribute("data-src");
+              if (src) {
+                img.src = src;
+                img.onload = () => {
+                  img.classList.remove("blur-sm");
+                  const placeholder = img.nextElementSibling;
+                  if (
+                    placeholder &&
+                    placeholder.classList.contains("image-placeholder")
+                  ) {
+                    placeholder.style.opacity = "0";
+                    setTimeout(() => placeholder.remove(), 300);
+                  }
+                };
+                img.removeAttribute("data-src");
+                observer.unobserve(img);
+              }
+            }
+          });
+        },
+        { rootMargin: "50px" }
+      );
+
+      // Observe all lazy images
+      function observeLazyImages() {
+        document.querySelectorAll(".lazy-image").forEach((img) => {
+          imageObserver.observe(img);
+        });
+      }
+
       const container = document.getElementById("projects");
 
       projects.forEach((project) => {
         container.innerHTML += `
       <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
         class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-5 md:hover:scale-105 transition-transform duration-300"
       >
-        <img
-          src="${project.image}"
-          alt="${project.title}"
-          class="w-full object-cover rounded-lg"
-        />
+        <div class="relative">
+          <img
+            data-src="${project.image}"
+            alt="${project.title} - Project Screenshot"
+            class="lazy-image w-full object-cover rounded-lg blur-sm transition-all duration-500"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 animate-pulse rounded-lg image-placeholder"></div>
+        </div>
         <div class="mt-3">
           <h3 class="text-xl font-semibold text-gray-800 mb-2">${
             project.title
@@ -747,6 +812,9 @@
       </div>
     `;
       });
+
+      setTimeout(observeLazyImages, 100);
+      document.addEventListener("DOMContentLoaded", observeLazyImages);
     </script>
   </body>
 </html>
